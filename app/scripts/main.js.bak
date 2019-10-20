@@ -1,3 +1,10 @@
+/**
+ *	Cvio - Resume/CV Template (HTML)
+ *	Author: beshleyua
+ *	Author URL: http://themeforest.net/user/beshleyua
+ *	Copyright Â© Cvio by beshleyua. All Rights Reserved.
+ **/
+
 (function($) {
   'use strict';
 
@@ -360,7 +367,7 @@
   $('.section').on('click', '.mouse_btn', function() {
     $('body, html').animate(
       {
-        scrollTop: height
+        scrollTop: height - 150
       },
       800
     );
@@ -683,4 +690,97 @@
       });
     }
   });
+
+  /*
+		Google Maps
+	*/
+  if ($('#map').length) {
+    initMap();
+  }
 })(jQuery);
+
+/*
+	Google Map Options
+*/
+function initMap() {
+  var myLatlng = new google.maps.LatLng(48.859003, 2.345275); // <- Your latitude and longitude
+  var styles = [
+    {
+      stylers: [
+        {
+          hue: '#ff1a00'
+        },
+        {
+          invert_lightness: true
+        },
+        {
+          saturation: -100
+        },
+        {
+          lightness: 33
+        },
+        {
+          gamma: 0.5
+        }
+      ]
+    },
+    {
+      featureType: 'water',
+      elementType: 'geometry',
+      stylers: [
+        {
+          color: '#2D333C'
+        }
+      ]
+    },
+    {
+      elementType: 'labels',
+      stylers: [
+        {
+          visibility: 'off'
+        }
+      ]
+    },
+    {
+      elementType: 'labels.icon',
+      stylers: [
+        {
+          visibility: 'off'
+        }
+      ]
+    },
+    {
+      featureType: 'administrative.land_parcel',
+      stylers: [
+        {
+          visibility: 'off'
+        }
+      ]
+    },
+    {
+      featureType: 'administrative.neighborhood',
+      stylers: [
+        {
+          visibility: 'off'
+        }
+      ]
+    }
+  ];
+
+  var mapOptions = {
+    zoom: 16,
+    center: myLatlng,
+    mapTypeControl: false,
+    disableDefaultUI: true,
+    zoomControl: false,
+    scrollwheel: false,
+    styles: styles
+  };
+
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  /*var marker = new google.maps.Marker({
+		position: myLatlng,
+		map: map,
+		title: 'We are here!'
+	});*/
+}
