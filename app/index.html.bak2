@@ -109,9 +109,8 @@
                   style="background-image: url(images/man.jpg);"
                 ></div>
                 <h1 class="h-title">
-                  Hello, I’m <strong>Agung Setyawan</strong>, Web Developer
-                  <br />
-                  Based in Bandung, Indonesia.
+                  Hello, I’m <strong>Agung Setyawan</strong>, Web Developer<br />
+                  Based in Bandung Indonesia.
                 </h1>
                 <div class="h-subtitle typing-subtitle">
                   <p>I develop <strong>backend/frontend</strong></p>
@@ -138,7 +137,7 @@
           <div class="content content-box">
             <!-- image -->
             <div class="image">
-              <img src="images/IMG_0774.jpg" alt="" />
+              <img src="images/man2.jpg" alt="" />
             </div>
 
             <!-- desc -->
@@ -150,7 +149,7 @@
                 databases. While the frontend developer uses the Vue JS
                 framework. I am happy to research the framework or service first
                 before implementing it on the project. Currently I am interested
-                about machine learning and Golang.
+                about machine learning and golang.
               </p>
               <!-- <div class="info-list">
                 <ul>
@@ -188,7 +187,7 @@
                   <div class="name">Backend Developer</div>
                   <div class="text">
                     Develop API with an orientation on speed and security, and
-                    use the latest services and frameworks.
+                    don't forget to use the latest services and frameworks.
                   </div>
                 </div>
               </div>
@@ -277,19 +276,171 @@
           </div>
         </div>
 
+        <!-- Section Design Skills -->
+        <div class="section skills" id="section-skills">
+          <div class="content">
+            <!-- title -->
+            <div class="title">
+              <div class="title_inner">Design Skills</div>
+            </div>
+
+            <!-- skills items -->
+            <div class="skills percent content-box">
+              <ul>
+                <li>
+                  <div class="name">Web Design</div>
+                  <div class="progress ">
+                    <div class="percentage" style="width: 90%;">
+                      <span class="percent">90%</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">Illustrations</div>
+                  <div class="progress ">
+                    <div class="percentage" style="width: 70%;">
+                      <span class="percent">70%</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">Photoshop</div>
+                  <div class="progress ">
+                    <div class="percentage" style="width: 95%;">
+                      <span class="percent">95%</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">Graphic Design</div>
+                  <div class="progress ">
+                    <div class="percentage" style="width: 85%;">
+                      <span class="percent">85%</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Languages Skills -->
+        <div class="section skills" id="section-skills-lang">
+          <div class="content">
+            <!-- title -->
+            <div class="title">
+              <div class="title_inner">Languages Skills</div>
+            </div>
+
+            <!-- skills items -->
+            <div class="skills dotted content-box">
+              <ul>
+                <li>
+                  <div class="name">English</div>
+                  <div class="progress">
+                    <div class="percentage" style="width: 90%;">
+                      <span class="percent">90%</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">German</div>
+                  <div class="progress">
+                    <div class="percentage" style="width: 70%;">
+                      <span class="percent">70%</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">Italian</div>
+                  <div class="progress">
+                    <div class="percentage" style="width: 55%;">
+                      <span class="percent">55%</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">French</div>
+                  <div class="progress">
+                    <div class="percentage" style="width: 85%;">
+                      <span class="percent">85%</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <!-- Section Coding Skills -->
-        <div class="section skills" id="section-skills-know">
+        <div class="section skills" id="section-skills-code">
           <div class="content">
             <!-- title -->
             <div class="title">
               <div class="title_inner">Coding Skills</div>
             </div>
 
+            <!-- skills items -->
+            <div class="skills circles content-box">
+              <ul>
+                <li>
+                  <div class="name">WordPress</div>
+                  <div class="progress p90">
+                    <!-- p90 = 90% circle fill color -->
+                    <div class="percentage">
+                      <span class="percent">90%</span>
+                    </div>
+                    <span>90%</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">PHP / MYSQL</div>
+                  <div class="progress p75">
+                    <!-- p75 = 75% circle fill color -->
+                    <div class="percentage">
+                      <span class="percent">75%</span>
+                    </div>
+                    <span>75%</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">Angular / JavaScript</div>
+                  <div class="progress p85">
+                    <!-- p85 = 85% circle fill color -->
+                    <div class="percentage">
+                      <span class="percent">85%</span>
+                    </div>
+                    <span>85%</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">HTML / CSS</div>
+                  <div class="progress p95">
+                    <!-- p95 = 95% circle fill color -->
+                    <div class="percentage">
+                      <span class="percent">95%</span>
+                    </div>
+                    <span>95%</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Knowladge Skills -->
+        <div class="section skills" id="section-skills-know">
+          <div class="content">
+            <!-- title -->
+            <div class="title">
+              <div class="title_inner">Knowledge</div>
+            </div>
+
             <!-- skills -->
             <div class="skills list content-box">
               <ul>
                 <li>
-                  <div class="name">Node JS</div>
+                  <div class="name">Website hosting</div>
                 </li>
                 <li>
                   <div class="name">iOS and android apps</div>
@@ -877,9 +1028,6 @@
             </a> -->
             <a target="_blank" href="https://github.com/agungsetyawan">
               <span class="icon fab fa-github"></span>
-            </a>
-            <a target="_blank" href="https://www.linkedin.com/in/agung-setyawan-4b476b145/">
-              <span class="icon fab fa-linkedin"></span>
             </a>
           </div>
         </div>
