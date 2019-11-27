@@ -105,7 +105,7 @@ function fonts() {
 }
 
 function extras() {
-  return src(['app/*', '!app/*.html'], {
+  return src(['app/*', '!app/*.html', '!app/*.bak*'], {
     dot: true
   }).pipe(dest('dist'));
 }
@@ -119,7 +119,11 @@ function measureSize() {
 }
 
 function deployToGithub() {
-  return src('dist/**/*').pipe(ghPages());
+  const ghOptions = {
+    remoteUrl: 'https://github.com/agungsetyawan/agungsetyawan.github.io',
+    origin: 'deploy'
+  };
+  return src('dist/**/*').pipe(ghPages(ghOptions));
 }
 
 const build = series(
