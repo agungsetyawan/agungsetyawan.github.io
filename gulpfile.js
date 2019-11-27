@@ -6,6 +6,7 @@ const del = require('del');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const { argv } = require('yargs');
+const ghPages = require('gulp-gh-pages');
 
 const $ = gulpLoadPlugins();
 const server = browserSync.create();
@@ -117,6 +118,10 @@ function measureSize() {
   return src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
 }
 
+function deployToGithub() {
+  return src('dist/**/*').pipe(ghPages());
+}
+
 const build = series(
   clean,
   parallel(
@@ -127,6 +132,19 @@ const build = series(
     extras
   ),
   measureSize
+);
+
+const deploy = series(
+  clean,
+  parallel(
+    lint,
+    series(parallel(styles, icons, scripts), html),
+    images,
+    fonts,
+    extras
+  ),
+  measureSize,
+  deployToGithub
 );
 
 function startAppServer() {
@@ -185,7 +203,11 @@ function startDistServer() {
 
 let serve;
 if (isDev) {
-  serve = series(clean, parallel(styles, scripts, fonts, icons), startAppServer);
+  serve = series(
+    clean,
+    parallel(styles, scripts, fonts, icons),
+    startAppServer
+  );
 } else if (isTest) {
   serve = series(clean, scripts, startTestServer);
 } else if (isProd) {
@@ -195,3 +217,4 @@ if (isDev) {
 exports.serve = serve;
 exports.build = build;
 exports.default = build;
+exports.deploy = deploy;

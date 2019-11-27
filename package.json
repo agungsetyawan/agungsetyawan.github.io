@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "grained": "0.0.2",
+    "gulp-gh-pages": "^0.5.4",
     "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
     "jarallax": "^1.11.1",
@@ -49,6 +50,7 @@
     "serve:dist": "cross-env NODE_ENV=production gulp serve",
     "start": "gulp serve",
     "build": "cross-env NODE_ENV=production gulp",
+    "deploy": "cross-env NODE_ENV=production gulp deploy",
     "test": "npm run serve:test",
     "tasks": "gulp --tasks"
   },
