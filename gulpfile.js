@@ -119,11 +119,11 @@ function measureSize() {
 }
 
 function deployToGithub() {
-  const ghOptions = {
-    remoteUrl: 'https://github.com/agungsetyawan/agungsetyawan.github.io',
-    origin: 'deploy'
-  };
-  return src('dist/**/*').pipe(ghPages(ghOptions));
+  return src('dist/**/*').pipe(
+    ghPages({
+      branch: 'master'
+    })
+  );
 }
 
 const build = series(
