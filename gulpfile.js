@@ -111,7 +111,7 @@ function extras() {
 }
 
 function clean() {
-  return del(['.tmp', 'dist']);
+  return del(['.tmp', 'dist', '.publish']);
 }
 
 function measureSize() {
@@ -119,11 +119,7 @@ function measureSize() {
 }
 
 function deployToGithub() {
-  return src('dist/**/*').pipe(
-    ghPages({
-      branch: 'master'
-    })
-  );
+  return src('dist/**/*').pipe(ghPages({ branch: 'master' }));
 }
 
 const build = series(
